@@ -1,16 +1,16 @@
 from time import perf_counter
-from collections import defaultdict
+from collections import Counter
 
 with open('input_day11.txt') as file:
     start_stones = set(int(num) for num in file.readline().split())
 
-stones = defaultdict(int)
+stones = Counter()
 for num in start_stones:
     stones[num] = 1
 
 
 def update(stones: dict) -> dict:
-    updated_stones = defaultdict(int)
+    updated_stones = Counter()
     for num in stones:
         length = len(str(num))
 
