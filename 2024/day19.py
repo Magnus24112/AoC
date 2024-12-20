@@ -1,4 +1,3 @@
-from collections import defaultdict
 from time import perf_counter
 start = perf_counter()
 
